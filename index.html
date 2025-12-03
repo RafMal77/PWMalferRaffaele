@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .item {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JSON List</h1>
+  <div id="list"></div>
+
+  <script>
+    const dataList = [
+      { id: 1, nome: "Element 1", descrizione: "Description for element 1", url:'https://google.it' },
+      { id: 2, nome: "Element 2", descrizione: "Description for element 2", url: 'https://amazon.it' },
+      { id: 3, nome: "Element 3", descrizione: "Description for element 3", url: 'https://ansa.it' }
+    ];
+
+    const container = document.getElementById('list');
+
+    dataList.forEach(element => {
+      const div = document.createElement('div');
+      div.className = 'item';
+      div.innerHTML = `
+        <h3>${element.nome}</h3>
+        <p>${element.descrizione}</p>
+        <p><a href="${element.url}" target="_blank">${element.url}</a></p>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
