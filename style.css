@@ -1,0 +1,11 @@
+ body {
+     font-family: Arial, sans-serif;
+     padding: 20px;
+ }
+
+ .item {
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     margin-bottom: 10px;
+ }
